@@ -1,5 +1,5 @@
 {
-  "name": "pilates-booking",
+  "name": "pilates-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "google-auth-library": "^10.5.0",
+    "googleapis": "^171.4.0",
+    "nanoid": "^3.3.11",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "resend": "^6.9.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
