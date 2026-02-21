@@ -32,9 +32,13 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.local.example
 
 # setup keys (never commit)
 .setup-keys/
+
+# npm cache for vercel CLI
+.npm-cache/
 
 # vercel
 .vercel
