@@ -7,18 +7,18 @@
 ## 実施済み
 
 ### 1. Google Cloud (GCP)
-- **プロジェクト**: `pilates-website-vtj`
+- **プロジェクト**: `pilates-studio-site`
 - **API**: Calendar API, Sheets API, Drive API を有効化
-- **サービスアカウント**: `pilates-booking@pilates-website-vtj.iam.gserviceaccount.com`
+- **サービスアカウント**: `pilates-booking@pilates-studio-site.iam.gserviceaccount.com`
 - **キー**: `.setup-keys/sa-key.json`（Base64 は env-generated.txt に出力済み）
 
 ### 2. Google カレンダー
 - **予約カレンダー作成済み**
-- **ID**: `86ca77d3b10340ff36e983ec63e99190388e712e5658ed0cf74d413831b7f98b@group.calendar.google.com`
+- **ID**: `934128e0c8ff7587d4312889763270ca5ce9d89602f13297a0ff70cd8dced46d@group.calendar.google.com`
 - サービスアカウントがオーナーなので共有不要
 
 ### 3. Google スプレッドシート
-- **作成済み**: [pilates-website-data](https://docs.google.com/spreadsheets/d/142LQAv0N3MkfRBFHFtkhNl-pJO5NstViIxMou7C6gI8/edit)
+- **作成済み**: [pilates-website-data](https://docs.google.com/spreadsheets/d/1Oj3MkCUmfFFqiBCaH4HukH0OXHUe5AjuYgmI_I44DPQ/edit)
 - **シート**: customers, bookings, lesson_notes（ヘッダー行あり）
 - サービスアカウントと共有済み
 
@@ -47,9 +47,9 @@
 | 変数名 | 値 | 取得元 |
 |--------|-----|--------|
 | GOOGLE_SERVICE_ACCOUNT_KEY_BASE64 | （長い文字列） | `.setup-keys/env-generated.txt` の1行目 |
-| GOOGLE_CALENDAR_ID_BOOKING | `86ca77d3b10340ff36e983ec63e99190388e712e5658ed0cf74d413831b7f98b@group.calendar.google.com` | 上記 |
-| GOOGLE_SHEETS_ID | `142LQAv0N3MkfRBFHFtkhNl-pJO5NstViIxMou7C6gI8` | 上記 |
-| CRON_SECRET | `9c76a28caf5039a0287b19840e3761d0e7834931e4f448ef8a9cf3c097be6b1b` | 上記 |
+| GOOGLE_CALENDAR_ID_BOOKING | `934128e0c8ff7587d4312889763270ca5ce9d89602f13297a0ff70cd8dced46d@group.calendar.google.com` | 上記 |
+| GOOGLE_SHEETS_ID | `1Oj3MkCUmfFFqiBCaH4HukH0OXHUe5AjuYgmI_I44DPQ` | 上記 |
+| CRON_SECRET | （.setup-keys/env-generated.txt を参照） | 上記 |
 | RESEND_API_KEY | （Resend で取得） | Resend ダッシュボード |
 | RESEND_FROM | `onboarding@resend.dev` | テスト用（本番は独自ドメイン） |
 | INSTRUCTOR_EMAIL | あなたのメール | 失敗通知の宛先 |
