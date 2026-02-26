@@ -7,39 +7,39 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white/90 backdrop-blur-sm border-b border-neutral-200 sticky top-0 z-50">
-      <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl font-semibold text-primary-700 tracking-wide">
-          Pilates Studio
+    <header className="bg-white/80 backdrop-blur-md border-b border-neutral-100 sticky top-0 z-50">
+      <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+        <Link href="/" className="text-lg font-medium text-neutral-900 tracking-wider">
+          PILATES STUDIO
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6">
-          <Link href="/about" className="text-neutral-700 hover:text-primary-600 transition-colors text-sm">
-            スタジオ紹介
+        <nav className="hidden md:flex items-center gap-8">
+          <Link href="/about" className="text-neutral-500 hover:text-neutral-900 transition-colors text-sm font-medium">
+            About
           </Link>
-          <Link href="/lessons" className="text-neutral-700 hover:text-primary-600 transition-colors text-sm">
-            レッスン・料金
+          <Link href="/lessons" className="text-neutral-500 hover:text-neutral-900 transition-colors text-sm font-medium">
+            Lessons
           </Link>
           <Link
             href="/booking"
-            className="bg-primary-500 hover:bg-primary-600 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors"
+            className="bg-neutral-900 hover:bg-neutral-800 text-white px-5 py-2.5 rounded-md text-sm font-medium transition-all"
           >
-            予約する
+            Book Now
           </Link>
         </nav>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 text-neutral-600"
+          className="md:hidden p-2 text-neutral-900"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="メニュー"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
@@ -47,27 +47,27 @@ export default function Header() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-white border-t border-neutral-100 px-4 py-4 space-y-3">
+        <nav className="md:hidden bg-white border-t border-neutral-100 px-6 py-6 space-y-4 h-screen">
           <Link
             href="/about"
-            className="block text-neutral-700 hover:text-primary-600 py-2"
+            className="block text-lg font-medium text-neutral-900 py-2 border-b border-neutral-100"
             onClick={() => setIsMenuOpen(false)}
           >
-            スタジオ紹介
+            About
           </Link>
           <Link
             href="/lessons"
-            className="block text-neutral-700 hover:text-primary-600 py-2"
+            className="block text-lg font-medium text-neutral-900 py-2 border-b border-neutral-100"
             onClick={() => setIsMenuOpen(false)}
           >
-            レッスン・料金
+            Lessons
           </Link>
           <Link
             href="/booking"
-            className="block bg-primary-500 hover:bg-primary-600 text-white px-5 py-3 rounded-full text-center font-medium transition-colors"
+            className="block bg-neutral-900 text-white px-5 py-4 rounded-lg text-center font-medium mt-8"
             onClick={() => setIsMenuOpen(false)}
           >
-            予約する
+            Book Now
           </Link>
         </nav>
       )}
